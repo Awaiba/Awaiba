@@ -1,0 +1,360 @@
+/* General Reset */
+body {
+    background-color: #dadce0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Transparent Header */
+header {
+    background: transparent; /* Makes the header transparent */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: none; /* Optional: removes any shadow from the header */
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff; /* White text for better visibility over the video */
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ddd; /* Slightly lighter color on hover */
+}
+
+/* Hide header when scrolling down */
+.hidden {
+    transform: translateY(-100%);
+}
+
+/* Container */
+.container {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Global Container Style */
+.section-container {
+    width: 80%;
+    margin: 50px auto; /* Centers the container and gives space between sections */
+    max-width: 1200px; /* Optional: limits the maximum width of the container */
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Video Styling */
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -2; /* Video stays in the background */
+}
+
+/* Image on top of the video */
+.hero-image {
+    position: absolute;
+    top: 50%; /* Centers the image vertically */
+    left: 43%; /* Centers the image horizontally */
+    transform: translate(-50%, -50%);
+    width: 350px; /* Image size */
+    z-index: -1; /* Image is above the video */
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    color: rgb(48, 48, 48);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%; /* Makes sure the text block occupies full width */
+}
+
+.midtext {
+    position: absolute;
+    font-size: 1.35rem;
+    font-family: 'Georgia', serif;
+    color: rgb(48, 48, 48);
+    z-index: 1;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.midtext1 {
+    position: absolute;
+    font-size: 15px;
+    font-family: 'Georgia', serif;
+    color: rgb(48, 48, 48);
+    z-index: 1;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, 75px);
+    text-align: center;
+    width: 100%;
+}
+
+/* Styling for each title individually with adjustable positions */
+.title1 {
+    font-size: 6rem;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    font-weight: normal;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    transform: translate(0%, -170%);
+}
+
+.title2 {
+    font-size: 7rem;
+    font-family: 'Arial', sans-serif;
+    color: rgb(48, 48, 48);
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+    transform: translate(-1200%, 0%);
+}
+
+.title3 {
+    font-size: 6rem;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    font-weight: normal;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    transform: translate(-60%, -55%);
+}
+
+/* Optional: Adding media query for responsiveness */
+@media (max-width: 768px) {
+    .title1, .title2, .title3 {
+        font-size: 4rem; /* Adjust text size for mobile */
+    }
+
+    .title1, .title3 {
+        font-size: 2rem;
+    }
+
+    .title2 {
+        font-size: 3rem;
+    }
+}
+
+/* Home Section Styling */
+#home-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+}
+
+#home-container h1 {
+    font-size: 3rem;
+    font-family: 'Caudex', sans-serif;
+    margin: 0;
+}
+
+#home-container img {
+    margin-top: 20px;
+}
+
+/* uTRAVEL Section Styling */
+#utravel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#utravel-container h1 {
+    font-size: 2rem;
+    font-family: 'Caudex', sans-serif;
+}
+
+#utravel-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px 0;
+}
+
+#utravel-container .btn {
+    margin-top: 20px;
+}
+
+#utravel-container img {
+    margin-top: 20px;
+}
+
+/* WalkON Section Styling */
+#walkon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#walkon-container h1 {
+    font-size: 2rem;
+    font-family: 'Caudex', sans-serif;
+}
+
+#walkon-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px 0;
+}
+
+#walkon-container .btn {
+    margin-top: 20px;
+}
+
+#walkon-container img {
+    margin-top: 20px;
+}
+
+/* Logo styling */
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+/* Intro Section Styling */
+.intro {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px; /* Adjusted to give space for fixed header */
+}
+
+.intro h1 {
+    font-family: 'Caudex', sans-serif;
+}
+
+/* Footer Section Styling */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section-container {
+        width: 90%;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    #home-container h1 {
+        font-size: 2rem;
+    }
+
+    #home-container img {
+        width: 200px; /* Make the image smaller on mobile */
+    }
+
+    .logo img {
+        height: 60px;
+    }
+}
