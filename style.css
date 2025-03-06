@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
 /* General Reset */
 body {
     background-color: #dadce0;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Transparent Header */
@@ -28,7 +31,7 @@ header {
 .navbar a {
     text-decoration: none;
     color: #fff; /* White text for better visibility over the video */
-    font-weight: bold;
+    font-weight: normal;
     padding: 10px;
     transition: color 0.3s;
 }
@@ -103,8 +106,8 @@ header {
 .midtext {
     position: absolute;
     font-size: 1.35rem;
-    font-family: 'Georgia', serif;
-    color: rgb(48, 48, 48);
+    font-family: 'Poppins', sans-serif;
+        color: rgb(48, 48, 48);
     z-index: 1;
     top: 75%;
     left: 50%;
@@ -116,7 +119,7 @@ header {
 .midtext1 {
     position: absolute;
     font-size: 15px;
-    font-family: 'Georgia', serif;
+    font-family: 'Poppins', sans-serif;;
     color: rgb(48, 48, 48);
     z-index: 1;
     top: 95%;
@@ -129,7 +132,7 @@ header {
 /* Styling for each title individually with adjustable positions */
 .title1 {
     font-size: 6rem;
-    font-family: 'Georgia', serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     font-weight: normal;
     font-style: italic;
@@ -140,7 +143,7 @@ header {
 
 .title2 {
     font-size: 7rem;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: rgb(48, 48, 48);
     margin: 10px 0;
     position: relative;
@@ -150,7 +153,7 @@ header {
 
 .title3 {
     font-size: 6rem;
-    font-family: 'Georgia', serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     font-weight: normal;
     font-style: italic;
@@ -269,12 +272,13 @@ header {
 .navbar a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: normal;
     padding: 10px;
     transition: color 0.3s;
 }
 
 .navbar a:hover {
+    text-decoration: underline;
     color: #000;
 }
 
@@ -358,3 +362,118 @@ footer nav ul li a:hover {
         height: 60px;
     }
 }
+
+.container-utravel, 
+.container-walkon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-utravel{
+    flex: 1;
+    padding-right: 40px; /* Increased padding */
+}
+.content-walkon{
+    flex: 1;
+    padding-right: 40px; /* Increased padding */
+}
+.container-utravel .content, 
+.container-walkon .content {
+    text-align: left; 
+    padding-left: 40px; /* Add left padding */
+    display: flex; /* Enable flexbox for the content */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.title {
+    font-size: 42px; /* Increased font size */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.container-utravel .title, 
+.container-walkon .title {
+    margin-bottom: 20px; /* Push the title to the top */
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.container-utravel .tags, 
+.container-walkon .tags {
+    margin-top: auto; /* Push the tags and button to the bottom */
+}
+
+.tag {
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.btn {
+    margin-top: 20px; 
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 125px;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.image-container-utravel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    text-align: justify;
+}
+
+.container-walkon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.image-container-walkon {
+    order: -1; /* Moves the image to the left */
+    flex: 1;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
