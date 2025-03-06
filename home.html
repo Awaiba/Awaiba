@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="logo">
@@ -23,80 +21,97 @@
         </div>
     </header>
 
-    <!-- Main Content Section -->
     <main>
         <div class="hero">
             <video autoplay loop muted plays-inline class="back-video">
-                <source src="IMG/videoplayback.webm">
+                <source src="IMG/BGloop.mp4">
             </video>
-            <!-- Image directly on top of the video -->
             <img src="IMG/ANISH PRTFOLIO PIC 1.png" alt="Portfolio Pic" class="hero-image">
-            <!-- Big text on top -->
             <div class="hero-text">
-                <h1 class="title1">WEB & MOBILE</h1>
-                <h1 class="title2">*</h1>
-                <h1 class="title3">UI/UX</h1>
+                <h1 class="title1" id="webMobile">WEB & MOBILE</h1>
+                <h1 class="title2" id="star">*</h1>
+                <h1 class="title3" id="uiUx">UI/UX</h1>
             </div>
             <div class="midtext">
                 <p class="midtext">Elevating user experiences<br> through design that captivates <br> engages.</p>
                 <p class="midtext1"><u><a href="#about">More about me</a></u></p>
+            </div>           
+        </div>
 
-            </div>              
-        </div>
         <div class="project-section"> 
-            <div class="container-utravel">
-            <div class="content-utravel">
-                <p class="brand">uTRAVEL</p>
-                <h1 class="title">A true companion on your Travel</h1>
-                <div class="tags">
-                    <span class="tag">Solo Trips</span>
-                    <span class="tag">Travel Guides</span>
-                    <span class="tag">Local Experiences</span>
-                    <span class="tag">Hotel Bookings</span>
-                    <span class="tag">Road Trips</span>
+            <div class="container-utravel" id="utravel-container">
+                <div class="content-utravel"> 
+                    <div class="brand">uTRAVEL</div>
+                    <h1 class="title">A true companion on your Travel</h1>
+                    <div class="tags">
+                        <span class="tag">Solo Trips</span>
+                        <span class="tag">Travel Guides</span>
+                        <span class="tag">Local Experiences</span>
+                        <span class="tag">Hotel Bookings</span>
+                        <span class="tag">Road Trips</span>
+                    </div>
+                    <button class="btn">View Work</button>
                 </div>
-                <button class="btn">View Work</button>
-            </div>
-            <div class="image-container-utravel">
-                <img src="IMG/utravel mockup.png" alt="Mobile UI" class="image">
-            </div>
-        </div>
-    </div>
-    
-    <div class="project-section"> 
-        <div class="container-walkon">
-            <div class="content-walkon">
-                <p class="brand">WalkON</p>
-                <h1 class="title">Get your KICKS!</h1>
-                <div class="tags">
-                    <span class="tag">Sneaker Culture</span>
-                    <span class="tag">Minimalist Design</span>
-                    <span class="tag">Online Shopping</span>
-                    <span class="tag">Exclusive Drops</span>
-                    <span class="tag">Performance Footwear</span>
+                <div class="image-container-utravel">
+                    <img src="IMG/utravel mockup.png" alt="Mobile UI" class="image">
                 </div>
-                <button class="btn">In Progress</button>
-            </div>
-            <div class="image-container-walkon">
-                <img src="IMG/walkon.png" alt="WalkON Logo" class="image">
             </div>
         </div>
-    </div>
-    
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="https://www.behance.net" target="_blank">Behance</a></li>
-                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                </ul>
-            </nav>
-            <p>&copy; 2025 anishwaiba. All rights reserved.<br>Made with <3 and alot of coffee (120% sugar, less ice). </p>
+
+        <div class="project-section"> 
+            <div class="container-walkon" id="walkon-container">
+                <div class="content-walkon"> 
+                    <div class="brand">WalkON</div>
+                    <h1 class="title">Get your KICKS!</h1>
+                    <div class="tags">
+                        <span class="tag">Sneaker Culture</span>
+                        <span class="tag">Minimalist Design</span>
+                        <span class="tag">Online Shopping</span>
+                        <span class="tag">Exclusive Drops</span>
+                        <span class="tag">Performance Footwear</span>
+                    </div>
+                    <button class="btn">In Progress</button>
+                </div>
+                <div class="image-container-walkon">
+                    <img src="IMG/walkon.png" alt="WalkON Logo" class="image">
+                </div>
+            </div>
         </div>
-    </footer>
+
+        <div class="project-section">
+            <div class="container-hbl" id="hbl-container">  
+                <div class="content-hbl">
+                    <div class="brand">HBL Mobile Banking App</div>
+                    <h1 class="title">Banking on the Go</h1>  
+                    <div class="tags">
+                        <span class="tag">User-Friendly Interface</span>
+                        <span class="tag">Secure Transactions</span>
+                        <span class="tag">Account Management</span>
+                        <span class="tag">Bill Payments</span>
+                        <span class="tag">Funds Transfer</span>
+                    </div>
+                    <button class="btn">In Progress</button> 
+                </div>
+                <div class="image-container-hbl">
+                    <img src="IMG/Screenshot 2025-03-06 124418.png" alt="HBL App Mockup" class="image"> 
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="https://www.behance.net" target="_blank">Behance</a></li>
+                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </nav>
+                <p>&copy; 2025 anishwaiba. All rights reserved.<br>Made with <3 and alot of coffee (120% sugar, less ice). </p>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
-
-

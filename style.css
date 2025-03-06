@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
 /* General Reset */
 body {
-    background-color: #dadce0;
+    background-color: ;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -138,7 +137,7 @@ header {
     font-style: italic;
     position: relative;
     display: inline-block;
-    transform: translate(0%, -170%);
+    transform: translate(0%, -190px)
 }
 
 .title2 {
@@ -148,7 +147,7 @@ header {
     margin: 10px 0;
     position: relative;
     display: inline-block;
-    transform: translate(-1200%, 0%);
+    transform: translate(-864%,15%);
 }
 
 .title3 {
@@ -161,7 +160,9 @@ header {
     display: inline-block;
     transform: translate(-60%, -55%);
 }
-
+.hero-text{
+    cursor: pointer;
+}
 /* Optional: Adding media query for responsiveness */
 @media (max-width: 768px) {
     .title1, .title2, .title3 {
@@ -185,7 +186,6 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
-    color: white;
     padding: 20px;
 }
 
@@ -256,6 +256,36 @@ header {
 #walkon-container img {
     margin-top: 20px;
 }
+
+/* hbl Section Styling */
+#hbl-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#hbl-container h1 {
+    font-size: 2rem;
+    font-family: 'Caudex', sans-serif;
+}
+
+#hbl-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px 0;
+}
+
+#hbl-container .btn {
+    margin-top: 20px;
+}
+
+#hbl-container img {
+    margin-top: 20px;
+}
+
 
 /* Logo styling */
 .logo img {
@@ -363,8 +393,7 @@ footer nav ul li a:hover {
     }
 }
 
-.container-utravel, 
-.container-walkon {
+.container-utravel{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -374,9 +403,28 @@ footer nav ul li a:hover {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-image: url("IMG/utravel_background.jpg"); /* Add a background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-attachment: fixed;
+} 
+
+.container-walkon, .container-hbl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically center */
+    max-width: 1100px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-image: url("IMG/walkon_background.jpg"); /* Add a background image */
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column; /* Added from previous response */
 }
 
-.content-utravel{
+.content-utravel, .content-hbl{
     flex: 1;
     padding-right: 40px; /* Increased padding */
 }
@@ -385,12 +433,14 @@ footer nav ul li a:hover {
     padding-right: 40px; /* Increased padding */
 }
 .container-utravel .content, 
-.container-walkon .content {
+.container-walkon .content, 
+.container-hbl .content {
     text-align: left; 
     padding-left: 40px; /* Add left padding */
     display: flex; /* Enable flexbox for the content */
     flex-direction: column; /* Stack elements vertically */
 }
+
 
 .brand {
     font-size: 14px;
@@ -404,7 +454,8 @@ footer nav ul li a:hover {
 }
 
 .container-utravel .title, 
-.container-walkon .title {
+.container-walkon .title, 
+.container-hbl .title {
     margin-bottom: 20px; /* Push the title to the top */
 }
 
@@ -416,7 +467,8 @@ footer nav ul li a:hover {
 }
 
 .container-utravel .tags, 
-.container-walkon .tags {
+.container-walkon .tags, 
+.container-hbl .tags {
     margin-top: auto; /* Push the tags and button to the bottom */
 }
 
@@ -450,6 +502,13 @@ footer nav ul li a:hover {
     justify-content: center;
 }
 
+.image-container-walkon, .image-container-hbl {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    order: 1; /* Added from previous response */
+}
+
 .image {
     max-width: 100%;
     border-radius: 10px;
@@ -460,20 +519,14 @@ footer nav ul li a:hover {
     text-align: justify;
 }
 
-.container-walkon {
+.container-walkon, .container-walkon {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px; 
 }
 
-.image-container-walkon {
-    order: -1; /* Moves the image to the left */
-    flex: 1;
-}
-
 .image {
     max-width: 100%;
     height: auto;
 }
-
