@@ -1,41 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* General Reset */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
-/* Transparent Header */
+.menu-icon img {
+    padding-top: 7px;
+    width: 35px;
+    height: auto;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.show-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* For screens larger than 768px (desktop/tablet) */
+@media (min-width: 768px) {
+    .mobilemidimage {
+        display: none; /* Hide on desktop/tablet */
+    }
+
+    .mobilemidimage img {
+        display: none; /* Hide image on desktop/tablet */
+    }
+
+    .mobilemidtext {
+        display: none; /* Hide text on desktop/tablet */
+    }
+
+    .mobilemidtext1 {
+        display: none; /* Hide text on desktop/tablet */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+    .menu-icon {
+        display: block;
+    }
+    
+    .container-utravel,
+    .container-hbl, .container-walkon {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+
+    .image {
+        width: 100%; /* Correct image width */
+    }
+    
+    .content-utravel,
+    .content-walkon,
+    .content-hbl {
+        padding-top: 5%;
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add space between content and image */
+    }
+
+    .image-container-utravel,
+    .image-container-walkon,
+    .image-container-hbl {
+        max-width: max-content;
+        order: 1; /* Place image above content */
+    }
+
+    .hero-image {
+        display: flex;
+        width: 50%;
+    }
+
+    .midtext {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .midtext1 {
+        font-size: 0.75rem;
+        margin-bottom: 10px; /* Adjust font size for mobile */
+    }
+
+    .container-work p {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        margin-top: 1rem;
+    }
+
+    .title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .tag {
+        font-size: 0.5rem; /* Adjust font size for mobile */
+    }
+
+    .btn {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    footer {
+        text-align: center; /* Center footer content */
+    }
+
+    .footer-section {
+        margin-bottom: 10px; /* Reduced gap - adjust as needed */
+    }
+
+    .copyright {
+        text-align: center; /* Center copyright text */
+    }
+
+    .container-work {
+        margin-top: 2rem; /* Reduced gap - adjust as needed */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        width: 100%; /* Full width on small screens */
+    }
+    .hero {
+        display: none; 
+    }
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        .mobilemidimage {
+          width: 100%; /* Example: Reduce width to 40% */
+          height: auto; /* Maintain aspect ratio */
+          margin-top: 6rem; /* Center the image horizontally */
+        }
+      
+        .mobilemidimage img { /* Target the image directly */
+          width: 100%; /* Ensure image fits within the div */
+          height: auto;
+        }
+        
+        .mobilemidtext {
+            text-align: center;
+            font-size: 1.2rem; /* Increased font size */
+            font-family: 'Caudex', sans-serif;
+            color: rgb(48, 48, 48);
+        }
+        .mobilemidtext1 {
+            text-align: center;
+            font-size: 0.8rem; /* Increased font size */
+            font-family: 'Caudex', sans-serif;
+            color: rgb(48, 48, 48);
+        }
+    }
+    
+}
+
+
+/* Header Styling */
 header {
-    background: transparent;
-    position: fixed;
+    position: fixed; /* Make it fixed at the top */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
-    box-shadow: none;
-    padding: 10px 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Navbar styling */
-.navbar {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: normal;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #ddd;
+    background-color: transparent; /* Change this to whatever background you want */
+    z-index: 10; /* Ensures it's above other elements */
+    transition: transform 0.3s ease; /* Smooth transition when translating */
 }
 
 /* Hide header when scrolling down */
@@ -53,13 +209,13 @@ header {
     align-items: center;
 }
 
-
 /* Hero Section Styling */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
     overflow: hidden;
+    margin-top: 6%;
 }
 
 /* Video Styling */
@@ -75,46 +231,102 @@ header {
 
 /* Image on top of the video */
 .hero-image {
-    padding-top: 5%;
     position: absolute;
     top: 50%; /* Centers the image vertically */
     left: 51%; /* Centers the image horizontally */
-    transform: translate(-50%, -50%);
-    width: 50rem; /* Image size */
+    transform: translate(-50%, 50%);
+    width: 25rem; /* Image size */
     z-index: -1; /* Image is above the video */
-    padding-bottom: 8%;
+    margin-bottom: 8%;
 }
 
+/* Styling for each title individually with adjustable positions */
+.hero-container {
+    position: relative; /* Container for positioning text */
+    width: 100%; /* Ensure full width */
+}
 
+.hero-image {
+    top: 50%; /* Container for positioning text */
+    width: 20%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hero-text {
+    position: absolute; /* Position text over the image */
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, 150%); /* Adjust for exact centering */
+    color: rgb(39, 39, 39); /* Make text stand out */
+    text-align: center; /* Center text */
+    z-index: 10; /* Ensure text is above the image */
+}
+
+.title1, .title2, .title3 {
+    margin: 0; /* Remove any default margin */
+    font-size: 5rem; /* Adjust font size for your design */
+    font-family: 'Poppins', sans-serif; /* Add desired font family */
+    font-style: italic;
+}
+.title1{
+    font-size: 5rem; /* Adjust font size for your design */
+    transform: translate(-20%, -320%); /* Adjust for exact centering */
+}
+.title2{    
+    font-size: 5rem; /* Adjust font size for your design */
+    transform: translate(-30%, -190%); /* Adjust for exact centering */
+}
+.title3{
+    font-size: 5rem; /* Adjust font size for your design */
+    transform: translate(45%, -420%); /* Adjust for exact centering */
+}
+
+.hero-text {
+    cursor: pointer;
+}
+
+/* Optional: Adding media query for responsiveness */
+@media (max-width: 768px) {
+    .title1, .title2, .title3 {
+        font-size: 4rem; /* Adjust text size for mobile */
+    }
+
+    .title1, .title3 {
+        font-size: 2rem;
+    }
+
+    .title2 {
+        font-size: 3rem;
+    }
+}
 
 .midtext {
-    padding-top: 6%;
     position: absolute;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increased font size */
     font-family: 'Poppins', sans-serif;
-        color: rgb(48, 48, 48);
+    color: rgb(48, 48, 48);
     z-index: 1;
-    top: 75%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+    margin-top: 4%;
 }
 
 .midtext1 {
-    padding-top: 1.90%;
     position: absolute;
-    font-size: 0.75rem;
-    font-family: 'Poppins', sans-serif;;
+    font-size: 0.85rem; /* Increased font size */
+    font-family: 'Poppins', sans-serif;
     color: rgb(48, 48, 48);
     z-index: 1;
-    top: 95%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, 75px);
     text-align: center;
     width: 100%;
+    margin-top: 2%;
 }
-
 
 /* Home Section Styling */
 #home-container {
@@ -137,7 +349,7 @@ header {
     margin-top: 20px;
 }
 
-.container-work{
+.container-work {
     text-align: center;
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
@@ -146,140 +358,136 @@ header {
     margin-bottom: 3rem;
 }
 
-#utravel-container {
-    display: flex;
-    flex-direction: row; /* Aligns content side by side */
-    align-items: center;
-    justify-content: space-between; /* Adds space between text & image */
-    gap: 50px; /* Adjust the spacing as needed */
-    padding: 30px;
-    text-align: left; /* Align text to the left */
+.project-section {
+    margin: 6% auto; /* Consistent margin for all project sections */
     max-width: 1200px;
-    margin: 0% auto; /* Centers the container */
 }
 
-#utravel-container .content-utravel {
-    flex: 1; /* Makes text container take up equal space */
-}
-
-#utravel-container h1 {
-    font-size: 5rem;
-    font-family: 'Caudex', sans-serif;
-}
-
-#utravel-container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 20px 0;
-}
-
-#utravel-container .btn {
-    margin-top: 20px;
-}
-
-#utravel-container .image-container-utravel {
-    flex: 1; /* Makes image container take up equal space */
+.container-utravel, 
+.container-walkon, 
+.container-hbl {
     display: flex;
-    justify-content: center;
-}
-
-#utravel-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners */
-}
-
-/* WalkON Section Styling */
-#walkon-container {
-    display: flex;
-    flex-direction: row-reverse; /* Swaps the position of text and image */
-    align-items: center;
     justify-content: space-between;
-    gap: 50px;
-    padding: 30px;
-    text-align: left;
-    max-width: 1200px;
-    margin: 6% auto;
-}
-
-#walkon-container .content-walkon {
-    flex: 1; /* Makes text container take up equal space */
-}
-
-#walkon-container h1 {
-    font-size: 5rem;
-    font-family: 'Caudex', sans-serif;
-}
-
-#walkon-container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 20px 0;
-}
-
-#walkon-container .btn {
-    margin-top: 20px;
-}
-
-#walkon-container .image-container-walkon {
-    flex: 1; /* Makes image container take up equal space */
-    display: flex;
-    justify-content: center;
-}
-
-#walkon-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners */
-}
-
-/* HBL Section Styling */
-#hbl-container {
-    display: flex;
-    flex-direction: row; /* Aligns content side by side */
     align-items: center;
-    justify-content: space-between; /* Adds space between text & image */
-    gap: 50px;
-    padding: 30px;
-    text-align: left;
-    max-width: 1200px;
-    margin: 6% auto;
+    max-width: 1100px;
+    margin: 0 auto; /* Removed extra margin */
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-#hbl-container .content-hbl {
-    flex: 1; /* Makes text container take up equal space */
+.container-utravel {
+    background-image: url("IMG/utravel_background.jpg"); 
 }
 
-#hbl-container h1 {
-    font-size: 5rem;
-    font-family: 'Caudex', sans-serif;
+.container-walkon {
+    background-image: url("IMG/walkon_background.jpg"); 
 }
 
-#hbl-container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 600px;
+.container-hbl {
+    background-image: url("IMG/hbl_background.jpg"); /* Make sure this path is correct */
+}
+
+.content-utravel, .content-hbl {
+    flex: 1;
+    padding-right: 40px; /* Increased padding */
+}
+
+.content-walkon {
+    flex: 1;
+    padding-right: 40px; /* Increased padding */
+}
+
+.container-utravel .content, 
+.container-walkon .content, 
+.container-hbl .content {
+    text-align: left; 
+    padding-left: 40px; /* Add left padding */
+    display: flex; /* Enable flexbox for the content */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.title {
+    font-size: 3rem; /* Slightly smaller title */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.container-utravel .title, 
+.container-walkon .title, 
+.container-hbl .title {
+    margin-bottom: 20px; /* Push the title to the top */
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin: 20px 0;
 }
 
-#hbl-container .btn {
-    margin-top: 20px;
+.container-utravel .tags, 
+.container-walkon .tags, 
+.container-hbl .tags {
+    margin-top: auto; /* Push the tags and button to the bottom */
 }
 
-#hbl-container .image-container-hbl {
-    flex: 1; /* Makes image container take up equal space */
+.tag {
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #333;
+}
+
+.btn {
+    margin-top: 20px; 
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 125px;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.image-container-utravel,
+.image-container-walkon,
+.image-container-hbl {
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
-#hbl-container img {
+.image {
     max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.imagewalkon {
+    margin-top: 8%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    text-align: justify;
+}
 
 /* Logo styling */
 .logo img {
@@ -316,6 +524,7 @@ header {
 .intro h1 {
     font-family: 'Caudex', sans-serif;
 }
+
 
 /* Footer Section Styling */
 footer {
@@ -367,178 +576,4 @@ footer {
 
 .copyright {
     text-align: right;
-}
-
-/* Mobile View Adjustments */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .section-container {
-        width: 90%;
-    }
-
-    footer nav {
-        flex-direction: column;
-    }
-
-    footer nav ul {
-        flex-direction: column;
-    }
-
-    #home-container h1 {
-        font-size: 2rem;
-    }
-
-    #home-container img {
-        width: 200px; /* Make the image smaller on mobile */
-    }
-
-    .logo img {
-        height: 60px;
-    }
-}
-
-.container-utravel{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 50px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: url("IMG/utravel_background.jpg"); /* Add a background image */
-    background-size: cover; /* Ensure the image covers the container */
-    background-attachment: fixed;
-} 
-
-.container-walkon, .container-hbl {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Align items vertically center */
-    max-width: 1100px;
-    margin: 50px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: url("IMG/walkon_background.jpg"); /* Add a background image */
-    background-size: cover;
-    background-attachment: fixed;
-    flex-direction: column; /* Added from previous response */
-}
-
-.content-utravel, .content-hbl{
-    flex: 1;
-    padding-right: 40px; /* Increased padding */
-}
-.content-walkon{
-    flex: 1;
-    padding-right: 40px; /* Increased padding */
-}
-.container-utravel .content, 
-.container-walkon .content, 
-.container-hbl .content {
-    text-align: left; 
-    padding-left: 40px; /* Add left padding */
-    display: flex; /* Enable flexbox for the content */
-    flex-direction: column; /* Stack elements vertically */
-}
-
-
-.brand {
-    font-size: 14px;
-    color: #666;
-}
-
-.title {
-    font-size: 42px; /* Increased font size */
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.container-utravel .title, 
-.container-walkon .title, 
-.container-hbl .title {
-    margin-bottom: 20px; /* Push the title to the top */
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.container-utravel .tags, 
-.container-walkon .tags, 
-.container-hbl .tags {
-    margin-top: auto; /* Push the tags and button to the bottom */
-}
-
-.tag {
-    background: #f0f0f0;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #333;
-}
-
-.btn {
-    margin-top: 20px; 
-    background: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 125px;
-}
-
-.btn:hover {
-    background: #333;
-}
-
-.image-container-utravel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.image-container-walkon, .image-container-hbl {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    order: 1; /* Added from previous response */
-}
-
-.image {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.description {
-    text-align: justify;
-}
-
-.container-walkon, .container-walkon {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px; 
-}
-
-.image {
-    max-width: 100%;
-    height: auto;
 }
