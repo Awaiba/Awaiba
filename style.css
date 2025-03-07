@@ -9,13 +9,13 @@ body {
 
 /* Transparent Header */
 header {
-    background: transparent; /* Makes the header transparent */
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: none; /* Optional: removes any shadow from the header */
+    box-shadow: none;
     padding: 10px 0;
     transition: transform 0.3s ease-in-out;
 }
@@ -28,14 +28,14 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: #fff; /* White text for better visibility over the video */
+    color: #fff;
     font-weight: normal;
     padding: 10px;
     transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #ddd; /* Slightly lighter color on hover */
+    color: #ddd;
 }
 
 /* Hide header when scrolling down */
@@ -53,12 +53,6 @@ header {
     align-items: center;
 }
 
-/* Global Container Style */
-.section-container {
-    width: 80%;
-    margin: 50px auto; /* Centers the container and gives space between sections */
-    max-width: 1200px; /* Optional: limits the maximum width of the container */
-}
 
 /* Hero Section Styling */
 .hero {
@@ -81,29 +75,22 @@ header {
 
 /* Image on top of the video */
 .hero-image {
+    padding-top: 5%;
     position: absolute;
     top: 50%; /* Centers the image vertically */
-    left: 43%; /* Centers the image horizontally */
+    left: 51%; /* Centers the image horizontally */
     transform: translate(-50%, -50%);
-    width: 350px; /* Image size */
+    width: 50rem; /* Image size */
     z-index: -1; /* Image is above the video */
+    padding-bottom: 8%;
 }
 
-/* Hero Text */
-.hero-text {
-    position: absolute;
-    color: rgb(48, 48, 48);
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%; /* Makes sure the text block occupies full width */
-}
+
 
 .midtext {
+    padding-top: 6%;
     position: absolute;
-    font-size: 1.35rem;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
         color: rgb(48, 48, 48);
     z-index: 1;
@@ -115,8 +102,9 @@ header {
 }
 
 .midtext1 {
+    padding-top: 1.90%;
     position: absolute;
-    font-size: 15px;
+    font-size: 0.75rem;
     font-family: 'Poppins', sans-serif;;
     color: rgb(48, 48, 48);
     z-index: 1;
@@ -127,55 +115,6 @@ header {
     width: 100%;
 }
 
-/* Styling for each title individually with adjustable positions */
-.title1 {
-    font-size: 6rem;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    font-weight: normal;
-    font-style: italic;
-    position: relative;
-    display: inline-block;
-    transform: translate(0%, -190px)
-}
-
-.title2 {
-    font-size: 7rem;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(48, 48, 48);
-    margin: 10px 0;
-    position: relative;
-    display: inline-block;
-    transform: translate(-864%,15%);
-}
-
-.title3 {
-    font-size: 6rem;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    font-weight: normal;
-    font-style: italic;
-    position: relative;
-    display: inline-block;
-    transform: translate(-60%, -55%);
-}
-.hero-text{
-    cursor: pointer;
-}
-/* Optional: Adding media query for responsiveness */
-@media (max-width: 768px) {
-    .title1, .title2, .title3 {
-        font-size: 4rem; /* Adjust text size for mobile */
-    }
-
-    .title1, .title3 {
-        font-size: 2rem;
-    }
-
-    .title2 {
-        font-size: 3rem;
-    }
-}
 
 /* Home Section Styling */
 #home-container {
@@ -196,6 +135,15 @@ header {
 
 #home-container img {
     margin-top: 20px;
+}
+
+.container-work{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(48, 48, 48);
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 #utravel-container {
@@ -371,36 +319,54 @@ header {
 
 /* Footer Section Styling */
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #fff;
-    text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #363636;
 }
 
-footer nav {
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-footer nav ul {
-    list-style: none;
+.footer-section {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-footer nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-footer nav ul li a:hover {
+.footer-section h3 {
+    font-size: 12px;
     font-weight: bold;
-    color: #000;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #363636;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: right;
 }
 
 /* Mobile View Adjustments */
