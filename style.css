@@ -43,24 +43,6 @@
     align-items: center;
 }
 
-/* For screens larger than 768px (desktop/tablet) */
-@media (min-width: 768px) {
-    .mobilemidimage {
-        display: none; /* Hide on desktop/tablet */
-    }
-
-    .mobilemidimage img {
-        display: none; /* Hide image on desktop/tablet */
-    }
-
-    .mobilemidtext {
-        display: none; /* Hide text on desktop/tablet */
-    }
-
-    .mobilemidtext1 {
-        display: none; /* Hide text on desktop/tablet */
-    }
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -77,6 +59,8 @@
         text-align: center; 
     }
 
+    .hero-container{
+    }
 
     .image {
         width: 100%; /* Correct image width */
@@ -95,11 +79,6 @@
     .image-container-hbl {
         max-width: max-content;
         order: 1; /* Place image above content */
-    }
-
-    .hero-image {
-        display: flex;
-        width: 50%;
     }
 
     .midtext {
@@ -150,36 +129,7 @@
 @media (max-width: 600px) {
     .footer-section {
         width: 100%; /* Full width on small screens */
-    }
-    .hero {
-        display: none; 
-    }
-    @media (max-width: 768px) { /* Adjust breakpoint as needed */
-        .mobilemidimage {
-          width: 100%; /* Example: Reduce width to 40% */
-          height: auto; /* Maintain aspect ratio */
-          margin-top: 6rem; /* Center the image horizontally */
-        }
-      
-        .mobilemidimage img { /* Target the image directly */
-          width: 100%; /* Ensure image fits within the div */
-          height: auto;
-        }
-        
-        .mobilemidtext {
-            text-align: center;
-            font-size: 1.2rem; /* Increased font size */
-            font-family: 'Caudex', sans-serif;
-            color: rgb(48, 48, 48);
-        }
-        .mobilemidtext1 {
-            text-align: center;
-            font-size: 0.8rem; /* Increased font size */
-            font-family: 'Caudex', sans-serif;
-            color: rgb(48, 48, 48);
-        }
-    }
-    
+}
 }
 
 
@@ -231,25 +181,56 @@ header {
 
 /* Image on top of the video */
 .hero-image {
-    position: absolute;
-    top: 50%; /* Centers the image vertically */
-    left: 51%; /* Centers the image horizontally */
-    transform: translate(-50%, 50%);
-    width: 25rem; /* Image size */
+    display: block;
+    margin: auto;
+    width: 50%; /* Default width for larger screens */
+    max-width: 100%; /* Ensures it doesn't go beyond 100% of the container */
+    min-width: 50%; /* Prevents the image from becoming too small */    
+    padding-left: 4%;
     z-index: -1; /* Image is above the video */
-    margin-bottom: 8%;
+    margin-bottom: 10%;
+    margin-top: 20px; /* Add margin-top to push the image down */
+}
+.hero{
+    margin-bottom: -120px;
 }
 
+@media (max-width: 1024px) {
+    .hero-image {
+        width: 80%; /* Adjust width for medium screens like tablets */
+        min-width: 50%;       
+        margin-top: 200px; /* Increase margin-top for medium screens */
+    }
+    .hero{
+        margin-bottom: -200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        width: 80%; /* Adjust width for medium screens like tablets */
+        min-width: 20%;        
+        margin-top: 200px;
+    }
+    .hero{
+        margin-bottom: -200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        width: 95%; /* Adjust width for small screens like phones */
+        min-width: 50%;        
+        margin-top: 140px; /* More margin-top on smaller screens */
+    }
+    .hero{
+        margin-bottom: -200px;
+    }
+}
 /* Styling for each title individually with adjustable positions */
 .hero-container {
     position: relative; /* Container for positioning text */
     width: 100%; /* Ensure full width */
-}
-
-.hero-image {
-    top: 50%; /* Container for positioning text */
-    width: 20%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
 }
 
 .hero-text {
@@ -311,7 +292,7 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    margin-top: 4%;
+    margin-top: 7%;
 }
 
 .midtext1 {
@@ -325,7 +306,6 @@ header {
     transform: translate(-50%, 75px);
     text-align: center;
     width: 100%;
-    margin-top: 2%;
 }
 
 /* Home Section Styling */
