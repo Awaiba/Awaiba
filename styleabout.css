@@ -1,0 +1,336 @@
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.menu-icon img {
+    padding-top: 7px;
+    width: 35px;
+    height: auto;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.show-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .navbar {
+        display: none !important;
+    }
+
+    .hero {
+        height: 250px;
+    }
+}
+
+/* Header Styling */
+header {
+    position: fixed; /* Make it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Change this to whatever background you want */
+    z-index: 10; /* Ensures it's above other elements */
+    transition: transform 0.3s ease; /* Smooth transition when translating */
+}
+
+/* Hide header when scrolling down */
+.hidden {
+    transform: translateY(-100%);
+}
+
+/* Container */
+
+/* About section whole */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: transparent;
+    padding: 20px;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-top: -19%;
+}
+
+.container-aboutsection {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking of sections */
+    padding: 50px;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.container-aboutme {
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.aboutheadtext1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 50;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.aboutheadtext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 50;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 2;
+    color: #3d3d3d;
+}
+
+.about-text, .about-text1, .about-text2, .about-text3 {
+    display: none;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.8s ease;
+    line-height: 2;
+    font-family: 'Poppins', sans-serif;
+    color: #3d3d3d;
+}
+
+.toggle-btn {
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 2s ease;
+}
+
+.rotate {
+    transition: transform 2s ease;
+    transform: rotate(360deg);
+}
+
+.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+/* Video Styling */
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -2; /* Video stays in the background */
+}
+
+/* Logo styling */
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Navbar Styling */
+.navbar {
+    padding-top: 24px;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+/* Footer Section Styling */
+footer {
+    background: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #363636;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section h3 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #363636;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: right;
+}
+
+.sticky-footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
+
+    /* About Section Padding for Mobile */
+    .container-aboutsection {
+        padding: 20px;
+    }
+
+    .container-aboutme {
+        padding: 20px 15px; /* Reduced padding */
+    }
+
+    .aboutheadtext1, .aboutheadtext {
+        font-size: 1.4rem; /* Adjusted font size */
+        margin-bottom: 10px; /* Reduced space */
+    }
+
+    p {
+        padding-bottom: 15px;
+        font-size: 1rem; /* Smaller text */
+    }
+
+    .toggle-btn {
+        font-size: 18px; /* Adjusted button size */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .navbar {
+        display: none !important;
+    }
+
+    .hero {
+        height: 250px;
+    }
+}
+
+/* Add more media queries as necessary for other breakpoints */
